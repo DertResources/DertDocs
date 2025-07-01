@@ -1,0 +1,111 @@
+ul {
+				padding: 0;
+				list-style-position: outside;
+				display: block;
+}
+
+ul li {
+				list-style-type: none;
+				display: block;
+}
+
+.nav-side-bar {
+				width: 310px;
+				height:100vh;
+}
+
+.scroll-side-bar {
+				overflow-x: hidden;
+				overflow-y: auto;
+				height:inherit;
+}
+
+a {
+				text-decoration: none;
+}
+
+.nav-side-bar li.current div > button.tree-expand:before {
+				content: "-";
+}
+
+.nav-side-bar li div > button.tree-expand:before {
+				content: "+";
+}
+
+.nav-side-bar li div > button.tree-expand {
+				width: 20px;
+				border:none;
+				background: none;
+				font-size: 20px;
+}
+
+.l1-header, .l2-header {
+				display:flex;
+}
+
+
+.nav-side-bar li > ul {
+				display: none;
+}
+
+.nav-side-bar li.current > ul {
+				display: block;
+}
+
+
+.l1-tree, .l2-tree {
+				min-height: 20px;
+				border: 1px solid gray;
+				margin: 0;
+}
+
+.l1-tree, .l1-tree.current:hover > a {
+				background-color: #848484;
+}
+.l1-tree:hover > a{
+				background-color: #707070;
+}
+
+
+.l2-tree, .l2-tree.current:hover {
+				background-color: #b5b5b5;
+}
+.l2-tree:hover > a {
+				background-color: #adadad;
+}
+
+
+.side-tree-noto-sans-400 {
+				font-family: "side-tree-font", sans-serif;
+				font-optical-sizing: auto;
+				font-weight: 500;
+				font-style: normal;
+				font-variation-settings: "wdth" 100;
+}
+
+.reference-internal {
+				flex: 1;
+				display: flex;
+				box-sizing: border-box;
+				margin-top: 0;
+				margin-bottom: 0;
+				margin-right: 0;
+				margin-left: 0;
+				font-family: 'side-tree-font'
+}
+
+.l1-tree div.l1-header > a.reference-internal {
+				padding-left: 2px;
+				padding-right:10px;
+				padding-top: 5px;
+				padding-bottom: 5px;
+				font-size: 16px;
+}
+
+.l2-tree div.l2-header > a.reference-internal {
+				padding-left: 35px;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				font-size: 15.5px;
+}
+
