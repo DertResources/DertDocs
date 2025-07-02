@@ -1,0 +1,150 @@
+ul {
+				padding: 0;
+				list-style-position: outside;
+				display: block;
+}
+
+ul li {
+				list-style-type: none;
+				display: block;
+}
+
+
+
+a {
+				text-decoration: none;
+}
+
+
+/* Main Page Structure */
+.root {
+				display: grid;
+				grid-template-areas:
+								"header header"
+								"nav content"
+								"nav footer";
+				grid-template-columns: 1fr 3fr;
+
+}
+
+.dd-header {
+				grid-area: header;
+				height: 30px;
+}
+
+.dd-nav {
+				grid-area: nav;
+				width: 310px;
+				display: grid;
+				grid-template-areas:
+								"side-bar-header"
+								"side-bar-content";
+				grid-template-columns: subgrid;
+}
+
+.dd-main {
+				grid-area: content;
+}
+
+.dd-footer {
+				grid-area: footer;
+				height: 30px;
+}
+
+/* side bar structure */
+
+.header-side-bar {
+				grid-area: side-bar-header;
+}
+
+.scroll-side-bar {
+				grid-area: side-bar-content;
+}
+
+/* side bar tree */
+
+.dd-nav scroll-side-bar li.current div > button.tree-expand:before {
+				content: "-";
+}
+
+.dd-nav scroll-side-bar li div > button.tree-expand:before {
+				content: "+";
+}
+
+.dd-nav scroll-side-bar li div > button.tree-expand {
+				width: 20px;
+				border: none;
+				background: none;
+				font-size: 20px;
+}
+
+.l1-header, .l2-header {
+				display: flex;
+}
+
+
+.nav-side-bar scroll-side-bar li > ul {
+				display: none;
+}
+
+.nav-side-bar li.current > ul {
+				display: block;
+}
+
+.l1-tree, .l2-tree {
+				min-height: 20px;
+				border: 1px solid gray;
+				margin: 0;
+}
+
+.l1-tree, .l1-tree.current:hover > a {
+				background-color: #848484;
+}
+
+.l1-tree:hover > a {
+				background-color: #707070;
+}
+
+
+.l2-tree, .l2-tree.current:hover {
+				background-color: #b5b5b5;
+}
+
+.l2-tree:hover > a {
+				background-color: #adadad;
+}
+
+
+.side-tree-noto-sans-400 {
+				font-family: "side-tree-font", sans-serif;
+				font-optical-sizing: auto;
+				font-weight: 500;
+				font-style: normal;
+				font-variation-settings: "wdth" 100;
+}
+
+.l1-tree div.l1-header > a.reference-internal {
+				padding-left: 2px;
+				padding-right: 10px;
+				padding-top: 5px;
+				padding-bottom: 5px;
+				font-size: 16px;
+}
+
+.l2-tree div.l2-header > a.reference-internal {
+				padding-left: 35px;
+				padding-top: 2px;
+				padding-bottom: 2px;
+				font-size: 15.5px;
+}
+
+.reference-internal {
+				flex: 1;
+				display: flex;
+				box-sizing: border-box;
+				margin-top: 0;
+				margin-bottom: 0;
+				margin-right: 0;
+				margin-left: 0;
+				font-family: 'side-tree-font'
+}

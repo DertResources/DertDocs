@@ -1,11 +1,3 @@
-				//const buttons = document.querySelectorALL('.tree-expand');
-
-			//	buttons.forEach(function (currentBtn) {
-			//					currentBtn.addEventListener('click', function () {
-			//									alert('text');
-			//					});
-			//	});
-
 document.addEventListener('DOMContentLoaded', addListnersToExpandButtons);
 
 function addListnersToExpandButtons() {
@@ -15,14 +7,19 @@ function addListnersToExpandButtons() {
 				}
 }
 
+function clickHandler(event) {
+				if (event.currentTarget.parentElement.parentElement.classList.contains('current')) {
+								removeAllCurrent();
+				} else {
+								removeAllCurrent();
+								event.currentTarget.parentElement.parentElement.classList.add('current');
+				}
+}
 
-function clickHandler(event)
-{
+function removeAllCurrent() {
 				const levelOneElements = document.querySelectorAll('.l1-tree');
 				for (let levelOneElement of levelOneElements) {
 								if (levelOneElement.classList.contains('current'))
 												levelOneElement.classList.remove('current');
 				}
-				event.currentTarget.parentElement.parentElement.classList.add('current');
-
 }
