@@ -1,17 +1,19 @@
 :root {
-				--main-content-background: #0f0f0f;
-				--header-background: #09090b;
+				--main-content-background: #0c0c0d;
+				--header-background: #151519;
 				--footer-background: #1c1c22;
-				--sidebar-header-background: #15151a;
-				--sidebar-scroll-background: #15151a;
-				/* l1 tree*/
+				--sidebar-header-background: #151519;
+				--sidebar-scroll-background: #151519;
+				/* l1 tree */
 				--l1-tree-background: #000000;
 				--l1-tree-hover-background: #000000;
 				--l1-tree-current-background: #000000;
 				--l1-tree-current-hover-background: #000000;
-				/* l2 tree*/
+				/* l2 tree */
 				--l2-tree-background: #000000;
 				--l2-tree-hover-background: #000000;
+				/* content */
+				--content-text-color: #c4c4cf;
 }
 
 ul {
@@ -22,7 +24,7 @@ ul {
 }
 
 .side-bar-tree {
-				margin: 0px 15px 0px 0px;
+				margin: 0px 20px 0px 0px;
 }
 
 ul li {
@@ -42,21 +44,15 @@ a {
 				margin: 0;
 				display: grid;
 				grid-template-areas:
-								"nav header"
-								"nav content"
-								"nav footer";
+								"nav content";
 				grid-template-columns: 300px 1fr;
-				grid-template-rows: 10px 1fr 30px;
+				grid-template-rows: 100vh;
 }
 
-.dd-header {
-				grid-area: header;
-				background-color: var(--header-background);
-}
+
 
 .dd-nav {
 				grid-area: nav;
-				width: 310px;
 				display: grid;
 				grid-template-areas:
 								"side-bar-header"
@@ -65,8 +61,29 @@ a {
 				grid-template-rows: min-content auto;
 }
 
-.dd-main {
+.dd-content {
 				grid-area: content;
+				overflow-y: auto;
+				display: grid;
+				grid-template-areas:
+								"header"
+								"main-page"
+								"footer";
+				grid-template-columns: subgrid;
+				grid-template-rows: 20px auto 30px;
+				color: var(--content-text-color);
+				font-size: 20px;
+}
+
+/* Content Structure */
+
+.dd-header {
+				grid-area: header;
+				background-color: var(--header-background);
+}
+
+.dd-main {
+				grid-area: main-page;
 				background-color: var(--main-content-background);
 }
 
@@ -75,7 +92,7 @@ a {
 				background-color: var(--footer-background);
 }
 
-/* side bar structure */
+/* Nav Bar Structure */
 
 .header-side-bar {
 				grid-area: side-bar-header;
@@ -83,11 +100,12 @@ a {
 }
 
 .scroll-side-bar {
+				overflow-y: scroll;
 				grid-area: side-bar-content;
 				background-color: var(--sidebar-scroll-background);
 }
 
-/* side bar tree */
+/* Side Bar Tree */
 
 .dd-nav li.current div > button.tree-expand:before {
 				content: "-";
