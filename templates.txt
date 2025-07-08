@@ -1,0 +1,48 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                           Elements
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== L1 Element ====
+<li class="l1-element">
+				<a class="reference-internal" href="https://example.com">
+								PAGE NAME HERE
+				</a>
+</li>
+
+==== L1 Tree Element ====
+<li class="l1-tree-element current">
+				<button class="tree-expand"></button>
+				<a class="reference-internal" href="https://example.com">
+								PAGE NAME HERE
+				</a>
+				<ul class="l2-tree">
+								SUBTREE HERE
+				</ul>
+</li>
+
+==== L2 Element ====
+<li class="l2-element">
+				<a class="reference-internal" href="https://example.com">
+								PAGE NAME HERE
+				</a>
+</li>
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                              Trees
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== L1 Tree ====
+<ul class="l1-tree">
+				TREE HERE
+</ul>
+
+==== L2 Tree ====
+<ul class="l2-tree">
+				TREE HERE
+</ul>
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                             Headers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==== Side Bar Caption Header ====
+<h1 class="side-bar-header">
+				CAPTION HERE
+</h1>
