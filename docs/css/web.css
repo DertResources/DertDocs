@@ -263,3 +263,8 @@ a {
 				box-sizing: border-box;
 				padding: 0px 150px 0px 150px;
 }
+
+.reference-external {
+				color: var(--reference-internal-text-color);
+				text-decoration: underline var(--reference-internal-text-color);
+}
