@@ -14,7 +14,7 @@
 				/* l2 element current */
 				--l2-element-current-and-hover-background: #41414e;
 				/* content */
-				--content-text-color: #c4c4cf;
+				--content-text-color: #fbfbf8;
 }
 
 ul {
@@ -94,7 +94,7 @@ a {
 								"main-page"
 								"footer";
 				grid-template-columns: subgrid;
-				grid-template-rows: 10px auto 40px;
+				grid-template-rows: 10px auto 30px;
 				color: var(--content-text-color);
 				font-size: 20px;
 				background-color: var(--header-footer-background);
@@ -116,14 +116,29 @@ a {
 				padding: 0px 40px 0px 40px;
 				box-sizing: border-box;
 				min-width: inherit;
+				font-family: "Nanum Gothic", sans-serif;
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 1.4;
 }
 
 .dd-footer {
 				grid-area: footer;
 				background-color: var(--header-footer-background);
+				padding-top: 5px;
 				padding-left: 20px;
 				box-sizing: border-box;
 				min-width: inherit;
+				font-size: 17px;
+}
+
+.dd-footer {
+				color: #2e2e33;
+}
+
+.dd-footer > a {
+				color:#323239;
+				text-decoration: underline #323239;
 }
 
 /* Nav Bar Structure */
@@ -200,15 +215,6 @@ a {
 				background-color: var(--l2-element-hover-background);
 }
 
-
-.side-tree-noto-sans-400 {
-				font-family: "side-tree-font", sans-serif;
-				font-optical-sizing: auto;
-				font-weight: 500;
-				font-style: normal;
-				font-variation-settings: "wdth" 100;
-}
-
 .l1-tree-element > a.reference-internal, .l1-element > a.reference-internal {
 				padding: .5em .7em .5em .5em;
 				box-sizing: border-box;
@@ -226,7 +232,8 @@ a {
 				grid-area: link-lable;
 				box-sizing: border-box;
 				margin: 0;
-				font-family: 'side-tree-font'
+				font-family: "Raleway", sans-serif;
+				font-weight: 500;
 }
 
 .logo {
@@ -250,6 +257,7 @@ a {
 				font-size: 20px;
 				color: #0163fb;
 				background-color: #131416;
+				font-family: "Raleway", sans-serif;
 }
 
 .l2-element.current, .l2-element.current:hover {
@@ -267,4 +275,27 @@ a {
 .reference-external {
 				color: var(--reference-internal-text-color);
 				text-decoration: underline var(--reference-internal-text-color);
+}
+
+.dd-main > h1 {
+				font-family: "Nanum Gothic", sans-serif;
+				font-weight: 700;
+				font-size: 40px;
+}
+
+.mc-ul {
+				list-style-position: outside;
+				margin: 0;
+				padding: 0 0 0 27px;
+}
+
+.mc-ul > li {
+
+				list-style: square;
+				color: white;
+				display: revert;
+}
+
+.dd-main > p {
+				margin: 15px 0 15px 0;
 }
