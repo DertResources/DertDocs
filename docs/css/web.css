@@ -15,6 +15,9 @@
 				--l2-element-current-and-hover-background: #41414e;
 				/* content */
 				--content-text-color: #fbfbf8;
+				--content-h1-color: #1761c2;
+				--content-h2-color: #3e88e8;
+				--content-h3-color: #69a4f1;
 }
 
 ul {
@@ -113,7 +116,7 @@ a {
 .dd-main {
 				grid-area: main-page;
 				background-color: var(--main-content-background);
-				padding: 0px 40px 0px 40px;
+				padding: 20px 40px 100px 40px;
 				box-sizing: border-box;
 				min-width: inherit;
 				font-family: "Nanum Gothic", sans-serif;
@@ -265,11 +268,7 @@ a {
 }
 
 .mc-img {
-				max-width: 100%;
-				height: auto;
-				display: block;
-				box-sizing: border-box;
-				padding: 0px 150px 0px 150px;
+				
 }
 
 .reference-external {
@@ -279,8 +278,26 @@ a {
 
 .dd-main > h1 {
 				font-family: "Nanum Gothic", sans-serif;
-				font-weight: 700;
+				font-weight: 800;
 				font-size: 40px;
+				color: var(--content-h1-color);
+				margin: 0 0 15px 0;
+}
+
+section > h2 {
+				font-family: "Nanum Gothic", sans-serif;
+				font-weight: 600;
+				font-size: 28px;
+				color: var(--content-h2-color);
+				margin: 0 0 15px 0;
+}
+
+section > h3 {
+				font-family: "Raleway", sans-serif;
+				font-weight: 600;
+				font-size: 24px;
+				color: var(--content-h3-color);
+				margin: 0 0 15px 0;
 }
 
 .mc-ul {
@@ -296,6 +313,25 @@ a {
 				display: revert;
 }
 
-.dd-main > p {
-				margin: 15px 0 15px 0;
+section > p {
+				margin: 0 0 13px 0;
+				font-size: 16px;
 }
+
+picture > img {
+				margin: 0 0 13px 0;
+				box-sizing: border-box;
+				max-width: 100%;
+				display: block;
+}
+
+section {
+				margin: 0 0 30px 0;
+}
+
+
+/*
+   * Images to a constant width
+   * fonts that arn't shit
+   * possible borders arround images
+*/
